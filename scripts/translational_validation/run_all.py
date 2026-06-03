@@ -741,8 +741,11 @@ def make_tcga_incremental() -> tuple[pd.DataFrame, pd.DataFrame]:
                 "coef_log_hr": np.nan,
                 "se": np.nan,
                 "hr": np.nan,
+                "hazard_ratio_per_sd": np.nan,
                 "ci95_low": np.nan,
                 "ci95_high": np.nan,
+                "ci95_low_per_sd": np.nan,
+                "ci95_high_per_sd": np.nan,
                 "p_value": np.nan,
                 "error": err,
             }
@@ -755,8 +758,11 @@ def make_tcga_incremental() -> tuple[pd.DataFrame, pd.DataFrame]:
                         "coef_log_hr": coef,
                         "se": se,
                         "hr": float(math.exp(coef)),
+                        "hazard_ratio_per_sd": float(math.exp(coef)),
                         "ci95_low": float(math.exp(coef - 1.96 * se)),
                         "ci95_high": float(math.exp(coef + 1.96 * se)),
+                        "ci95_low_per_sd": float(math.exp(coef - 1.96 * se)),
+                        "ci95_high_per_sd": float(math.exp(coef + 1.96 * se)),
                         "p_value": float(s["p"]),
                         "error": "",
                     }
@@ -785,8 +791,11 @@ def make_tcga_incremental() -> tuple[pd.DataFrame, pd.DataFrame]:
                 "coef_log_hr": coef,
                 "se": se,
                 "hr": float(math.exp(coef)),
+                "hazard_ratio_per_sd": float(math.exp(coef)),
                 "ci95_low": float(math.exp(coef - 1.96 * se)),
                 "ci95_high": float(math.exp(coef + 1.96 * se)),
+                "ci95_low_per_sd": float(math.exp(coef - 1.96 * se)),
+                "ci95_high_per_sd": float(math.exp(coef + 1.96 * se)),
                 "p_value": p,
                 "error": "",
             }
@@ -3070,14 +3079,15 @@ def write_manifest() -> None:
     manifest = pd.DataFrame(CREATED)
     path = REPORTS / "translational_validation_file_manifest.tsv"
     manifest.to_csv(path, sep="\t", index=False)
-    # Record the manifest after writing it; append its own checksum manually.
+    # The manifest cannot contain a stable checksum of itself because adding
+    # that checksum changes the file. Record an explicit self-reference note.
     rec = {
         "file_path": rel(path),
         "description": "Manifest of generated translational validation files",
         "source": "run_all.py output registry",
         "created_date": RUN_DATE,
-        "upstream_dependencies": "all generated outputs in this manifest",
-        "sha256": checksum(path),
+        "upstream_dependencies": "all generated outputs in this manifest; self-referential checksum omitted",
+        "sha256": "",
     }
     manifest = pd.concat([manifest, pd.DataFrame([rec])], ignore_index=True)
     manifest.to_csv(path, sep="\t", index=False)
