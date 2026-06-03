@@ -1,0 +1,27 @@
+# Local environments
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Large data and generated outputs
+data/
+figures/
+reports/
+submission/
+logs/
+
+# Manuscript files are intentionally excluded from this code repository.
+manuscript/
+*.tex
+*.aux
+*.log
+*.out
+*.pdf
+
+# Local release/build artifacts
+*.zip
+*.tar
+*.tar.gz
+

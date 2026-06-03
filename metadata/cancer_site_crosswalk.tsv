@@ -1,0 +1,55 @@
+source_vocab	source_code	globocan_label	mapping_note	nci_cost_site
+TCGA	BLCA	Bladder	direct	Bladder
+TCGA	BRCA	Breast	direct	Female Breast
+TCGA	CESC	Cervix uteri	direct	Cervix Uteri
+TCGA	COAD	Colorectum	direct_grouped_crc	Colorectal
+TCGA	READ	Colorectum	direct_grouped_crc	Colorectal
+TCGA	DLBC	Non-Hodgkin lymphoma	closest_nhl	Non-Hodgkin Lymphoma
+TCGA	ESCA	Oesophagus	direct	
+TCGA	GBM	Brain, central nervous system	direct_grouped_cns	
+TCGA	LGG	Brain, central nervous system	direct_grouped_cns	
+TCGA	HNSC	Lip, oral cavity	rough_head_neck_proxy	Oral Cavity
+TCGA	KICH	Kidney	direct_grouped_kidney	Kidney
+TCGA	KIRC	Kidney	direct_grouped_kidney	Kidney
+TCGA	KIRP	Kidney	direct_grouped_kidney	Kidney
+TCGA	LAML	Leukaemia	direct	Leukemia
+TCGA	LIHC	Liver and intrahepatic bile ducts	direct	
+TCGA	LUAD	Trachea, bronchus and lung	direct_grouped_lung	Lung
+TCGA	LUSC	Trachea, bronchus and lung	direct_grouped_lung	Lung
+TCGA	MESO	Mesothelioma	direct	
+TCGA	OV	Ovary	direct	Ovary
+TCGA	PAAD	Pancreas	direct	
+TCGA	PRAD	Prostate	direct	Prostate
+TCGA	SKCM	Melanoma of skin	direct	Melanoma
+TCGA	STAD	Stomach	direct	
+TCGA	TGCT	Testis	direct	
+TCGA	THCA	Thyroid	direct	Thyroid
+TCGA	UCEC	Corpus uteri	direct	Uterus
+TCGA	UCS	Corpus uteri	closest_uterus	Uterus
+TISCH2	BLCA	Bladder	direct	Bladder
+TISCH2	BRCA	Breast	direct	Female Breast
+TISCH2	CESC	Cervix uteri	direct	Cervix Uteri
+TISCH2	CRC	Colorectum	direct_grouped_crc	Colorectal
+TISCH2	READ	Colorectum	direct_grouped_crc	Colorectal
+TISCH2	DLBC	Non-Hodgkin lymphoma	closest_nhl	Non-Hodgkin Lymphoma
+TISCH2	NHL	Non-Hodgkin lymphoma	direct	Non-Hodgkin Lymphoma
+TISCH2	ESCA	Oesophagus	direct	
+TISCH2	Glioma	Brain, central nervous system	direct_grouped_cns	
+TISCH2	HNSC	Lip, oral cavity	rough_head_neck_proxy	Oral Cavity
+TISCH2	KICH	Kidney	direct_grouped_kidney	Kidney
+TISCH2	KIRC	Kidney	direct_grouped_kidney	Kidney
+TISCH2	KIPAN	Kidney	direct_grouped_kidney	Kidney
+TISCH2	AML	Leukaemia	direct	Leukemia
+TISCH2	ALL	Leukaemia	direct	Leukemia
+TISCH2	CLL	Leukaemia	direct	Leukemia
+TISCH2	LIHC	Liver and intrahepatic bile ducts	direct	
+TISCH2	NSCLC	Trachea, bronchus and lung	direct_grouped_lung	Lung
+TISCH2	SCLC	Trachea, bronchus and lung	direct_grouped_lung	Lung
+TISCH2	OV	Ovary	direct	Ovary
+TISCH2	PAAD	Pancreas	direct	
+TISCH2	PRAD	Prostate	direct	Prostate
+TISCH2	SKCM	Melanoma of skin	direct	Melanoma
+TISCH2	STAD	Stomach	direct	
+TISCH2	THCA	Thyroid	direct	Thyroid
+TISCH2	UCEC	Corpus uteri	direct	Uterus
+TISCH2	MM	Multiple myeloma	direct	

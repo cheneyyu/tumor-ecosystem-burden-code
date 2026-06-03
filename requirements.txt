@@ -1,0 +1,14 @@
+anndata
+beautifulsoup4
+cairosvg
+lifelines
+matplotlib
+numpy
+openpyxl
+pandas
+pillow
+requests
+scipy
+statsmodels
+xenaPython
+
